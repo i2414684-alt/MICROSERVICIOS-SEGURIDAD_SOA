@@ -1,0 +1,17 @@
+### Registro
+POST http://localhost:8081/api/auth/registro
+Content-Type: application/json
+
+{
+  "nombreUsuario": "juan",
+  "correo": "juan@correo.com",
+  "contrasena": "123456"
+}
+
+> {%
+    client.global.set("token", response.body.token);
+%}
+
+### Perfil (recurso protegido)
+GET http://localhost:8081/api/usuarios/perfil
+Authorization: Bearer {{token}}
