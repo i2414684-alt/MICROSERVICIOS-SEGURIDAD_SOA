@@ -8,6 +8,6 @@ public class MicroservicioSeguridadApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(MicroservicioSeguridadApplication.class, args);
+        System.out.println("\n==> Swagger: http://localhost:8081/swagger-ui/index.html\n");
     }
-
 }
